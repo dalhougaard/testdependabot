@@ -1,0 +1,22 @@
+name: Dependabot Pull Request Triage
+
+on:
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  triage:
+    if: github.actor == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Add Labels
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: 'dependabot, security'
+
+      - name: Assign Reviewer
+        uses: actions-ecosystem/action-assign@v1
+        with:
+          assignees: 'dalhougaard'
