@@ -17,6 +17,7 @@ jobs:
           labels: 'dependabot, security'
 
       - name: Assign Reviewer
-        uses: actions-ecosystem/action-assign@v1
+        uses: hkusu/review-assign-action@v1
         with:
-          assignees: 'dalhougaard'
+          assignees: dalhougaard # assign pull request author
+          reviewers: dalhougaard # if draft, assigned when draft is released
