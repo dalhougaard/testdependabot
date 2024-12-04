@@ -10,12 +10,6 @@ jobs:
     if: github.actor == 'dependabot[bot]'
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Add Labels
-        uses: actions-ecosystem/action-add-labels@v1
-        with:
-          labels: 'dependabot, security'
-
       - name: Assign Reviewer
         uses: hkusu/review-assign-action@v1
         with:
