@@ -1,12 +1,5 @@
 # testdependabot
 
-1.A short description ( a few paragraphs) of the testing principle you researched. The description needs to include:
-
-A thorough description of the testing principle
-Why you chose that principle
-How you implemented that principle for our class api
-A list of the pros and cons of that principle
-
 This repository was made to test creating automated pull requests from Dependabot alerts and assigning specific users to review the proposed changes. Security vulnerabilities can be introduced as code is expanded, so maintaining testing meant to combat introducing new vulnerabilities is important to the integrity of your project.
 
 I chose this principle because I have gained interest in the security side of IT rather recently. As more and more people develop more and more tools to be use on and by computers, there is room for error and always room for bad actors. Maintaining a secure application should be the standard across the board. 

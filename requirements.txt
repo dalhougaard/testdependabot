@@ -1,2 +1,2 @@
 Werkzeug==3.0.6
-Python==1.0.0
+Flask==1.0.0
