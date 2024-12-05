@@ -1,10 +1,10 @@
 # testdependabot
 
-This repository was made to test creating automated pull requests from Dependabot alerts and assigning specific users to review the proposed changes. Security vulnerabilities can be introduced as code is expanded, so maintaining testing meant to combat introducing new vulnerabilities is important to the integrity of your project.
+This repository was made to test creating automated pull requests from Dependabot alerts and assigning specific users to review the proposed changes using necojackarc/auto-request-review@v0.13.0. Security vulnerabilities can be introduced as code is expanded, so maintaining testing meant to combat introducing new vulnerabilities is important to the integrity of your project.
 
 I chose this principle because I have gained interest in the security side of IT rather recently. As more and more people develop more and more tools to be use on and by computers, there is room for error and always room for bad actors. Maintaining a secure application should be the standard across the board. 
 
-Dependabot will check your requirements or 'depends on' files and check if there are any known vulnerabilities in the specified versions of dependencies. Integrating these alerts into your CI/CD process will help keep things up to date as new vulnerabilities are discovered as well. Constant testing of dependencies that are not maintained by your organization is important to the security of your own application.
+Dependabot will check your requirements or 'depends on' files and check if there are any known vulnerabilities in the specified versions of dependencies. Integrating these alerts into your CI/CD process will help keep things up to date as new vulnerabilities are discovered as well. Constant testing of dependencies that are not maintained by your organization is important to the security of your own application. Dependabot has a setting in Github to automatically create a pull request with a change curated to specify a stable version of a dependency, which I have enabled. Combined with these requests made by Dependabot, I have a workflow set to run when a pull request is made by Dependabot that can request specific users or groups as reviewers, so these changes can be reviewed and pushed if deemed necessary.
 
 Pros of testing dependencies:
 - Find vulnerabilities shared by the security community
