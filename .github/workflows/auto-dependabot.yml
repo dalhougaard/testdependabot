@@ -11,8 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Assign Reviewer
-        uses: hkusu/review-assign-action@v1
+      - name: Auto Request Review
+        uses: necojackarc/auto-request-review@v0.13.0
         with:
-          assignees: ${{ github.actor}} # assign pull request author
-          reviewers: dalhougaard # if draft, assigned when draft is released
+          reviewers:
+            defaults:
+              - repository-owners
