@@ -5,6 +5,9 @@ on:
     types:
       - opened
 
+permissions:
+  pull-requests: write
+
 jobs:
   triage:
     if: github.actor == 'dependabot[bot]'
@@ -14,6 +17,6 @@ jobs:
       - name: Auto Request Review
         uses: necojackarc/auto-request-review@v0.13.0
         with:
-          reviewers:
-            defaults:
-              - repository-owners
+          token: ${{ secrets.GITHUB_TOKEN }}
+          config: .github/reviewers.yml
+          use_local: true
